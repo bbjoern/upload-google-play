@@ -43,6 +43,10 @@ inputs:
   mappingFile:
     description: "The mapping.txt file used to de-obfuscate your stack traces from crash reports"
     required: false
+  changesNotSentForReview:
+    description: "The changesNotSentForReview option whether changes can be sent for review automatically or not"
+    required: false
+    default: 'true'
 outputs:
   internalSharingDownloadUrl:
     description: "The internal app sharing download url if track was 'internalsharing'"

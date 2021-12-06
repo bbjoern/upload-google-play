@@ -24,6 +24,7 @@ async function run() {
         const status = core.getInput('status', { required: false });
         const whatsNewDir = core.getInput('whatsNewDirectory', { required: false });
         const mappingFile = core.getInput('mappingFile', { required: false });
+        const changesNotSentForReview = core.getBooleanInput('changesNotSentForReview', { required: false });
 
         // Validate that we have a service account json in some format
         if (!serviceAccountJson && !serviceAccountJsonRaw) {
@@ -116,6 +117,7 @@ async function run() {
             status: status,
             whatsNewDir: whatsNewDir,
             mappingFile: mappingFile,
+            changesNotSentForReview: changesNotSentForReview,
             name: releaseName
         }, validatedReleaseFiles);
 
